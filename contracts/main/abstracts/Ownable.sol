@@ -2,23 +2,22 @@
 
 pragma solidity ^0.8.0;
 
+//
+
 import "./Context.sol";
 
 abstract contract Ownable is Context {
-    address private _owner;
-
     event OwnershipTransferred(
         address indexed previousOwner,
         address indexed newOwner
     );
 
+    //
+    address private _owner;
+
+    //
     constructor() {
         _transferOwnership(_msgSender());
-    }
-
-    modifier onlyOwner() {
-        _checkOwner();
-        _;
     }
 
     function owner() public view virtual returns (address) {
@@ -29,8 +28,9 @@ abstract contract Ownable is Context {
         require(owner() == _msgSender(), "Ownable: caller is not the owner");
     }
 
-    function renounceOwnership() public virtual onlyOwner {
-        _transferOwnership(address(0));
+    modifier onlyOwner() {
+        _checkOwner();
+        _;
     }
 
     function transferOwnership(address newOwner) public virtual onlyOwner {
@@ -45,5 +45,9 @@ abstract contract Ownable is Context {
         address oldOwner = _owner;
         _owner = newOwner;
         emit OwnershipTransferred(oldOwner, newOwner);
+    }
+
+    function renounceOwnership() public virtual onlyOwner {
+        _transferOwnership(address(0));
     }
 }
