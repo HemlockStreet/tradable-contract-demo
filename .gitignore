@@ -12,3 +12,4 @@ artifacts
 gasReport.txt
 
 package-lock.json
+.vscode
