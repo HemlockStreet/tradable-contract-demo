@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/utils/Context.sol";
+import "./Context.sol";
 
 abstract contract Ownable is Context {
     address private _owner;
