@@ -6,7 +6,7 @@
 
 Click the Picture
 
-[![Video Walkthrough](https://github.com/HemlockStreet/tradable-contract-demo/blob/main/glob/ownableAbstracts.png)] (https://drive.google.com/file/d/1mGgkJjTZdS_4lPJEXlMPJGw4f85T4MNW/view?usp=sharing)
+![Video Walkthrough](https://github.com/HemlockStreet/tradable-contract-demo/blob/main/glob/ownableAbstracts.png) (https://drive.google.com/file/d/1mGgkJjTZdS_4lPJEXlMPJGw4f85T4MNW/view?usp=sharing)
 
 ## Transcript
 
