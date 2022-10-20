@@ -9,7 +9,12 @@ It's unsurprising that things like this come up since everything from vodka bott
 
 Before we dive in let's cover the basics of contract ownership with, what is probably the most popular smart contract in OpenZeppelin's library, the 'Ownable' abstract. Afterwards, we'll talk about their improvements in the new 'Ownable2Step' abstraction. Then from there, we'll dive into my very own custom abstraction, "Asset.sol".
 
-"Ownable.sol" can be applied to your base contract to automatically register the contract's deployer as its "_owner" upon creation and it saves this variable in a way that is publicly available with this "owner()" method. This "_owner" is just the saved address of a wallet and it must be rewritten every time you want to "transferOwnership()" or redesignate access to the contract's methods that are guarded by this "onlyOwner" modifier or "_checkOwner()" method. "Ownable2Step.sol" is a new abstraction by OpenZeppelin that builds on this by adding a second step to the transfer of ownership privileges by designating a "_pendingOwner" and requiring the "pendingOwner()" to "acceptOwnership()" before officially handing over the privileges. In both, you have the ability to "renounceOwnership()" which means throwing these privileges away; typically done to instill trust in a token's community.
+But first, a message from our sponsor:
+```
+For premium web3 content, our mentorship program, and access to our private Discord server, sign up today at eattheblocks.com. We have an excellent selection of free and paid courses exclusively available through our main website. Push the bounds of what you think is possible and become the best developer you can be.
+```
+
+The "Ownable.sol" abstract can be applied to your base contract to automatically register the contract's deployer as its "_owner" upon creation and it saves this variable in a way that is publicly available with this "owner()" method. This "_owner" is just the saved address of a wallet and it must be rewritten every time you want to "transferOwnership()" or redesignate access to the contract's methods that are guarded by this "onlyOwner" modifier or "_checkOwner()" method. "Ownable2Step.sol" is a new abstraction by OpenZeppelin that builds on this by adding a second step to the transfer of ownership privileges by designating a "_pendingOwner" and requiring the "pendingOwner()" to "acceptOwnership()" before officially handing over the privileges. In both, you have the ability to "renounceOwnership()" which means throwing these privileges away; typically done to instill trust in a token's community.
 
 These abstractions are great in their own right and generally useful without modification, but if you have a contract that actually serves as an asset that should be sold or traded there's no way to put these privileges into escrow for trustless transactions. My solution is to turn these privileges into an NFT, which will be referred to as the "Access Token", that your smart contract will interface with in order to define ownership. Owning the expensive jpeg means owning the contract.
 
@@ -21,8 +26,6 @@ We are only interested in being able to call a single function on the NFT contra
 
 If you're interested in trying this contract out or poking around in the unit tests, see the git repository in the video's description.
 
-Advertisement:
-For premium web3 content, our mentorship program, and access to our private Discord server, sign up today at eattheblocks.com. We have an excellent selection of free and paid courses exclusively available through our main website. Push the bounds of what you think is possible and become the best developer you can be.
 
 ## Gas Report
 
