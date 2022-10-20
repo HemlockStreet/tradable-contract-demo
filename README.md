@@ -10,7 +10,8 @@ It's unsurprising that things like this come up since everything from vodka bott
 Before we dive in let's cover the basics of contract ownership with, what is probably the most popular smart contract in OpenZeppelin's library, the 'Ownable' abstract. Afterwards, we'll talk about their improvements in the new 'Ownable2Step' abstraction. Then from there, we'll dive into my very own custom abstraction, "Asset.sol".
 
 But first, a message from our sponsor:
-```
+
+```txt
 For premium web3 content, our mentorship program, and access to our private Discord server, sign up today at eattheblocks.com. We have an excellent selection of free and paid courses exclusively available through our main website. Push the bounds of what you think is possible and become the best developer you can be.
 ```
 
@@ -26,10 +27,9 @@ We are only interested in being able to call a single function on the NFT contra
 
 If you're interested in trying this contract out or poking around in the unit tests, see the git repository in the video's description.
 
-
 ## Gas Report
 
-```
+```txt
 ·------------------------------------|---------------------------|-------------|-----------------------------·
 |        Solc version: 0.8.17        ·  Optimizer enabled: true  ·  Runs: 200  ·  Block limit: 30000000 gas  │
 ·····································|···························|·············|······························
