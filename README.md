@@ -5,6 +5,7 @@
 ## About
 
 Main Script:
+
 It's unsurprising that things like this come up since everything from vodka bottles to land itself have been turned into NFTs. If you're new here, I'm Cat. Today on Eat the Blocks, I'm going to show you how to turn your smart contract into an NFT.
 
 Before we dive in let's cover the basics of contract ownership with, what is probably the most popular smart contract in OpenZeppelin's library, the 'Ownable' abstract. Afterwards, we'll talk about their improvements in the new 'Ownable2Step' abstraction. Then from there, we'll dive into my very own custom abstraction, "Asset.sol".
