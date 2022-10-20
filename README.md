@@ -23,6 +23,8 @@ Let's assume you are a contractor that just deployed on behalf of a client, but 
 
 The key differences between the "Asset.sol" and "Ownable.sol" are primarily internal which means that it should be nearly indistinguishable except for the "OwnershipTransferred" event along with a couple of methods; of which none are called by other contracts. I did this because I wanted it to act as a "drag and drop" replacement for "Ownable.sol". The only key difference is that the constructor takes two arguments (the Access Token's address and ID) because, when you "transferOwnership()", it's actually redesignating the token itself.
 
+![alt text](https://github.com/HemlockStreet/tradable-contract-demo/blob/main/glob/abstracts.png "Abstracts UML")
+
 We are only interested in being able to call a single function on the NFT contract, which is "ownerOf()" so I went ahead and included this one line interface at the top instead of importing literally everything. Now when you fetch the owner, it goes to the NFT contract to ask who the owner of the saved token ID is and this results in two ways to exchange ownership. You can either redesignate the Access Token to an NFT that somebody else posesses OR you can trade the currently designated access token.
 
 If you're interested in trying this contract out or poking around in the unit tests, see the git repository in the video's description.
