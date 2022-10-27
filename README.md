@@ -6,7 +6,7 @@
 
 Click the Picture
 
-[![Video Walkthrough](https://eattheblocks.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75)](https://drive.google.com/file/d/1mGgkJjTZdS_4lPJEXlMPJGw4f85T4MNW/view?usp=sharing)
+[![Video Walkthrough](https://eattheblocks.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75)](https://www.youtube.com/watch?v=XwYYXHVJA-c)
 
 ## Transcript
 
